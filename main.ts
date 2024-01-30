@@ -1,8 +1,22 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { Logger } from "./utils/log.ts"
+import { Input } from "./utils/input.ts"
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+Logger.log("info","Hello")
+
+while (true) {
+    const a = Input()
+    switch (a) {
+        case "exit":
+            Deno.exit()
+            break;
+        case "help":
+            console.log("help")
+            break;
+        case "set":
+            console.log("set")
+            break;
+        default:
+            console.log("command not found")
+            break;
+    }
 }

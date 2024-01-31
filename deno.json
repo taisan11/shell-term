@@ -1,7 +1,11 @@
 {
   "tasks": {
-    "dev": "deno run -A --watch main.ts",
+    "dev": "deno run -A --watch consoleui.ts",
     "start": "deno run -A main.ts"
+  },
+  "imports": {
+    "kv": "https://deno.land/x/kv/mod.ts",
+    "z": "https://deno.land/x/zod@v3.22.4/mod.ts"
   },
   "unstable": ["kv"]
 }

@@ -1,9 +1,13 @@
 import { download } from "https://deno.land/x/download@v2.0.2/mod.ts";
-export async function DL(){
-const url =
-  "https://raw.githubusercontent.com/denolib/high-res-deno-logo/master/deno_hr.png";
-const fileName = "deno.png";
-const dir = ".";
+import { Logger } from "./log.ts"
+export async function DL(subc:string[]){
+const url = subc[1];
+const fileName = "test.txt";
+const dir = "./app/";
 
-await download(url, { file: fileName, dir });
+try {
+    await download(url, { file: fileName, dir });
+  } catch (err) {
+    Logger.log("error",err)
+  }
 }

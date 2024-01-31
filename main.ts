@@ -1,12 +1,14 @@
 import { Logger } from "./utils/log.ts"
-import { Input } from "./utils/input.ts"
 import { DL } from "./utils/download.ts"
-import * as z from "https://deno.land/x/zod@v3.22.4/mod.ts"
+import { run } from "./utils/run.ts"
 Logger.log("info","Hello")
 export async function main(a:string,n:number,dev?:boolean) {
     const asub = a.split(" ")
     const amain = asub[0]
     switch (amain) {
+        case "run":
+            await run()
+            break;
         case "exit":
             Deno.exit()
             break;

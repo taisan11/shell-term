@@ -4,6 +4,9 @@
     "start": "deno run -A main.ts"
   },
   "imports": {
+    "@david/dax": "jsr:@david/dax@^0.41.0",
+    "@std/fs": "jsr:@std/fs@^0.229.3",
+    "@std/io": "jsr:@std/io@^0.224.3",
     "kv": "https://deno.land/x/kv/mod.ts",
     "z": "https://deno.land/x/zod@v3.22.4/mod.ts"
   },

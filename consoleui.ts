@@ -3,7 +3,7 @@ import { main } from "./main.ts";
 
 let n = 0;
 while (n < 1) {
-  const a: string = Input();
+  const a: string|null = Input();
   if (a === null) {
     console.log("Input was null.");
     continue;

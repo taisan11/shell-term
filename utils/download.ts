@@ -1,4 +1,4 @@
-import { download } from "https://deno.land/x/download@v2.0.2/mod.ts";
+import { download } from "./dl.mod.ts";
 import { Logger } from "./log.ts";
 export async function DL(subc: string[]) {
   const url = subc[1];
